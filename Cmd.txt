@@ -1,4 +1,4 @@
-cd "COMPUTER GRAPHICS LAB"
+cd "COMPUTER_GRAPHICS_25-26"
 git init
 git add .
 git commit -m "Initial commit"
