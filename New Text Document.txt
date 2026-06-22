@@ -1,0 +1,11 @@
+cd "COMPUTER GRAPHICS LAB"
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/munshi-rishad/COMPUTER_GRAPHICS_25-26.git
+git push -u origin main
+
+
+git branch
+git checkout main
