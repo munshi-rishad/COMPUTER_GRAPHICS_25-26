@@ -1,0 +1,26 @@
+#include <GL/glut.h>
+#include <cmath>
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glBegin(GL_POLYGON);
+        glVertex2f(0, 0.7);
+        glVertex2f(0.7, 0.0);
+        glVertex2f(-0.7, 0.0);
+    glEnd();
+
+    glFlush();
+}
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitWindowSize(600, 600);
+    glutCreateWindow("OpenGL 64bit");
+    glutDisplayFunc(display);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glutMainLoop();
+    return 0;
+}

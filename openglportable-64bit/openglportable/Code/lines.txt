@@ -1,0 +1,31 @@
+#include <GL/glut.h>
+#include <cmath>
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glBegin(GL_POINTS);
+        for(float x = -0.8; x <= 0.8; x = x + 0.001) {
+            glVertex2f(x, 0.4);
+        }
+    glEnd();
+
+    glBegin(GL_LINES);
+        glVertex2f(-0.8, -0.4);
+        glVertex2f(0.8, -0.4);
+    glEnd();
+
+    glFlush();
+}
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitWindowSize(600, 600);
+    glutCreateWindow("OpenGL 64bit");
+    glutDisplayFunc(display);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glutMainLoop();
+    return 0;
+}

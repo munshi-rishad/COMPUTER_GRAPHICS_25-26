@@ -1,0 +1,36 @@
+#include <GL/glut.h>
+#include <cmath>
+
+void display()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glColor3f(0, 0.6, 0);
+    glBegin(GL_POLYGON);
+        glVertex2f(-0.8, 0.4);
+        glVertex2f(0.8, 0.4);
+        glVertex2f(0.8, -0.4);
+        glVertex2f(-0.8, -0.4);
+    glEnd();
+
+    float r = 0.3;
+    glColor3f(1, 0, 0);
+    glBegin(GL_POLYGON);
+        for(float theta = 0; theta <= 2 * 3.14; theta = theta + 0.01) {
+            glVertex2f(cos(theta) * r, sin(theta) * r);
+        }
+    glEnd();
+
+    glFlush();
+}
+
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitWindowSize(600, 600);
+    glutCreateWindow("OpenGL 64bit");
+    glutDisplayFunc(display);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glutMainLoop();
+    return 0;
+}
